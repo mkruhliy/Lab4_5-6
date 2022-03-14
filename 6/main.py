@@ -1,161 +1,45 @@
-class City:
-    def __init__(self, name) -> None:
-        self.name = name
-        self.character = None
-        self.item = None
-        self.link = None
-    def set_character(self, character):
-        self.character = character
-    def set_item(self, item):
-        self.item = item
-    def get_details(self):
-        print("\n                 "+self.name)
-    def link_city(self, city):
-        self.link = city
-    def get_character(self):
-        return self.character
-    def get_item(self):
-        return self.item
-    def get_link(self):
-        return self.link
-    def empty_city(self):
-        print('      O \n\
-     /|\ \n\
-_____/_\____________________________________')
+import game_custom
 
-class Character:
-    def __init__(self, name, hp) -> None:
-        self.name = name
-        self.hp = hp
-        self.item = None
-    def get_hp(self):
-        return self.hp
-    def set_gun(self, gun):
-        self.item = gun
-    def get_gun(self):
-        return self.item
+lviv = game_custom.City("Lviv")
+kyiv = game_custom.City("Kyiv")
+symu = game_custom.City("Symu")
+zaporizhzhia = game_custom.City("Zaporizhzhia")
+mykolaiv = game_custom.City("Mykolaiv")
+mariupol = game_custom.City("Mariupol")
 
-class Main_Character(Character):
-    def __init__(self, name, hp, description) -> None:
-        super().__init__(name, hp)
-        self.description = description
-        self.item = None
-        self.backpack = []
-    def backpack_capacity(self):
-        return self.backpack
-    def append_backpack(self, elem):
-        self.backpack.append(elem)
-    def backpack_repr(self):
-        return [x.name for x in self.backpack]
-    def get_description(self):
-        print("Your soldier: {}\nHP: {}\n'{}'".format(self.name, self.hp, self.description))
-    def heal(self, obj):
-        self.hp += obj.dm
-    def fight(self, chr):
-        self.hp -= chr.item.dm
-        chr.hp -= self.item.dm
-        if self.hp <=0:
-            if self.hp > chr.hp:
-                print("He's DEAD")
-                self.hp += chr.item.dm
-                return 'dead'
-            else:
-                print("You're DEAD")
-                return "me dead"
-        if chr.hp<=0:
-            print("He's DEAD")
-            return 'dead'
-        else:
-            print("HP now: {} - your, {} - enemys".format(self.hp, chr.hp))
-
-class Enemy(Character):
-    def __init__(self, name, hp, typee) -> None:
-        super().__init__(name, hp)
-        self.item = None
-        self.type = typee
-    def get_description(self):
-        print("      O_,~-                     -~,_O\n\
-     /|                             |\n\
-_____/_\___________________________/_\______\nYour opponent: {} -  hp:{}\n(type 'fight' to attack)".format(self.name, self.hp))
-    def get_type(self):
-        return self.type
-
-class SuperEnemy(Enemy):
-    def  __init__(self, name, hp, typee) -> None:
-        super().__init__(name, hp, typee)
-        self.item = None
-    def get_description(self):
-        print("	                      __/___\n\
-      O_,~-             _____/______| \n\
-     /|         _______/_____\_______\_____ \n\
-_____/_\_______ \              < < <       |\n\
-Your SUPER OPPONENT: {}  -  hp:{}\n(type 'fight' to attack)".format(self.name, self.hp))
-    def final(self):
-        first = input("\nBut to win the russian regime answer those questions.\n\
-Your final exam:\n'Ruskiy korabl idi ... '?:\n1) nahuy\n2) domoy\n3) palanitsa\n > ")
-        if first != '1':
-            return False
-        second = input("\nBatko nash ...: ?\n1) Petlura\n2) Biden\n3) Bandera\n> ")
-        if second != '3':
-            return False
-        third = input("\nDobruy ... Mu z Ukrainu ?\n1) ranok\n2) palanitsa\n3) vechir\n> ")
-        if third != '3':
-            return False
-        return True
-
-class Item:
-    def __init__(self, name, dm) -> None:
-        self.name = name
-        self.dm = dm
-    def get_name(self):
-        return self.name
-    def get_dm(self):
-        return self.dm
-
-class Gun(Item):
-    def __init__(self, name, dm) -> None:
-        super().__init__(name, dm)
-    def get_description(self, obj):
-        print('-'*18+'\n{} Gun: {} \ndamage: {}\n  ︻╦╤───\n'.format(obj, self.name, self.dm)+'-'*18)
-
-class Support(Item):
-    def __init__(self, name, dm) -> None:
-        super().__init__(name, dm)
-    def get_description(self):
-        print("      O                 _______  \n\
-     /|\               |  aid  |        \n\
-_____/_\_______________|_______|____________\n\
-Meds found here: {}  -  hp: {}\n(type 'take' to put in the backpack)".format(self.name, self.dm))
-
-
-lviv = City("Lviv")
-kyiv = City("Kyiv")
-dnipro = City("Dnipro")
-mariupol = City("Mariupol")
-
-me = Main_Character('Captain Price', 70, 'very nice guy')
-gun1 = Gun("AR15", 30)
+me = game_custom.MainCharacter('Captain Price', 100, 'very nice guy')
+gun1 = game_custom.Gun("AR15", 25)
 me.set_gun(gun1)
 
-aptechka = Support('aptechka', 20)
+aptechka = game_custom.Support('aptechka', 30)
 lviv.set_item(aptechka)
 lviv.link_city([None,kyiv])
 
-moskal = Enemy('moskal', 60, 'simple')
-gun2 = Gun("kalash", 30)
+moskal = game_custom.Enemy('moskal', 60, 'simple')
+gun2 = game_custom.Gun("kalash", 30)
 moskal.set_gun(gun2)
 kyiv.set_character(moskal)
-kyiv.link_city([lviv,dnipro])
+kyiv.link_city([lviv,symu])
 
-podorozhnyk = Support('podorozhnyk', 5)
-dnipro.set_item(podorozhnyk)
-dnipro.link_city([kyiv, mariupol])
+podorozhnyk = game_custom.Support('podorozhnyk', 15)
+symu.set_item(podorozhnyk)
+symu.link_city([kyiv, zaporizhzhia])
 
-korabl = SuperEnemy("ruskiy korabl", 40, 'super')
-gun3 = Gun('artileriya', 10)
-korabl.set_gun(gun3)
+katsap = game_custom.Enemy('kstsap', 28, 'simple')
+gun3 = game_custom.Gun('Mosin rifle', 10)
+katsap.set_gun(gun3)
+zaporizhzhia.set_character(katsap)
+zaporizhzhia.link_city([symu, mykolaiv])
+
+salo = game_custom.Support('salo', 20)
+mykolaiv.set_item(salo)
+mykolaiv.link_city([zaporizhzhia, mariupol])
+
+korabl = game_custom.SuperEnemy("ruskiy korabl", 100, 'super')
+gun4 = game_custom.Gun('artileriya', 10)
+korabl.set_gun(gun4)
 mariupol.set_character(korabl)
-mariupol.link_city([dnipro, None])
+mariupol.link_city([mykolaiv, None])
 
 
 current_city = lviv
@@ -277,7 +161,7 @@ while dead == False:
     elif command == 'help':
         print("\n<<<helper>>>\n\
   Your aim: Kill all enemies and to stay alive\n\
-  Collect meds on your way and use them if whenever you need\n\
+  Collect meds on your way and use them whenever you need\n\
   COMMANDS:\n\
   > go  - to move ahead\n\
   > back  - to move back\n\

@@ -1,0 +1,410 @@
+
+SLAVA UKRAINI and Welcome to the game GAME
+  _____  _    _  _____ _  _________     __  _  ______  _____            ____  _      
+ |  __ \| |  | |/ ____| |/ /_   _\ \   / / | |/ / __ \|  __ \     /\   |  _ \| |     
+ | |__) | |  | | (___ | ' /  | |  \ \_/ /  | ' / |  | | |__) |   /  \  | |_) | |     
+ |  _  /| |  | |\___ \|  <   | |   \   /   |  <| |  | |  _  /   / /\ \ |  _ <| |     
+ | | \ \| |__| |____) | . \ _| |_   | |    | . \ |__| | | \ \  / ____ \| |_) | |____ 
+ |_|  \_\\____/|_____/|_|\_\_____|  |_|    |_|\_\____/|_|  \_\/_/    \_\____/|______|
+
+Smash those russian occupants and God bless you!
+
+--------------------------------------
+type 'help' any time to see game rules
+--------------------------------------
+
+
+
+       .---.
+      /_____\
+      ( '.' )
+       \_-_/_
+    .-"`'V'//-.
+   / ,   |// , \
+  / /|Ll //Ll|\ \
+ / / |__//   | \_\
+ \ \/---|[]==| / /
+  \/\__/ |   \/\/
+   |/_   | Ll_\|
+     |  """  |
+     |   |   |
+     |   |   |
+     |   |   |
+     |   |   |
+     L___l___J
+      |_ | _|
+     (___|___)
+      ^^^ ^^^
+Your soldier: Captain Price
+HP: 100
+'very nice guy'
+------------------
+Your Gun: AR15 
+damage: 25
+  ︻╦╤───
+------------------
+
+
+Would you like to start?(y/n) 
+> y
+--------------------------------------------------
+
+
+Your HP: 100
+Gun damage: 25
+Your backpack: Empty
+
+                 Lviv
+      O                 _______  
+     /|\               |  aid  |        
+_____/_\_______________|_______|____________
+Meds found here: aptechka  -  hp: 30
+(type 'take' to put in the backpack)
+> help
+
+<<<helper>>>
+  Your aim: Kill all enemies and to stay alive
+  Collect meds on your way and use them whenever you need
+  COMMANDS:
+  > go  - to move ahead
+  > back  - to move back
+  > fight  - to shoot your enemy(check your, enemy HP and gun damage level befor shooting)
+  > take  - to put the meds you found to the backpack
+  to USE the meds from the backpack simply type its name
+
+
+
+Your HP: 100
+Gun damage: 25
+Your backpack: Empty
+
+                 Lviv
+      O                 _______  
+     /|\               |  aid  |        
+_____/_\_______________|_______|____________
+Meds found here: aptechka  -  hp: 30
+(type 'take' to put in the backpack)
+> take
+You put the aptechka in your backpack
+
+
+Your HP: 100
+Gun damage: 25
+Your backpack: ['aptechka']
+
+                 Lviv
+      O 
+     /|\ 
+_____/_\____________________________________
+> go
+
+
+Your HP: 100
+Gun damage: 25
+Your backpack: ['aptechka']
+
+                 Kyiv
+      O_,~-                     -~,_O
+     /|                             |
+_____/_\___________________________/_\______
+Your opponent: moskal -  hp:60
+(type 'fight' to attack)
+> fight
+HP now: 70 - your, 35 - enemys
+
+
+Your HP: 70
+Gun damage: 25
+Your backpack: ['aptechka']
+
+                 Kyiv
+      O_,~-                     -~,_O
+     /|                             |
+_____/_\___________________________/_\______
+Your opponent: moskal -  hp:35
+(type 'fight' to attack)
+> fight
+HP now: 40 - your, 10 - enemys
+
+
+Your HP: 40
+Gun damage: 25
+Your backpack: ['aptechka']
+
+                 Kyiv
+      O_,~-                     -~,_O
+     /|                             |
+_____/_\___________________________/_\______
+Your opponent: moskal -  hp:10
+(type 'fight' to attack)
+> aptechka
+YOUR HP NOW: 70
+
+
+Your HP: 70
+Gun damage: 25
+Your backpack: Empty
+
+                 Kyiv
+      O_,~-                     -~,_O
+     /|                             |
+_____/_\___________________________/_\______
+Your opponent: moskal -  hp:10
+(type 'fight' to attack)
+> fight
+He's DEAD
+Enemy gun dropped: 
+Gun: kalash - damage: 30
+
+WOULD YOU LIKE TO TAKE ENEMYS GUN?(y/n)> y
+
+
+------------------
+Your NEW Gun: kalash 
+damage: 30
+  ︻╦╤───
+------------------
+
+
+Your HP: 40
+Gun damage: 30
+Your backpack: Empty
+
+                 Kyiv
+      O 
+     /|\ 
+_____/_\____________________________________
+> go
+
+
+Your HP: 40
+Gun damage: 30
+Your backpack: Empty
+
+                 Symu
+      O                 _______  
+     /|\               |  aid  |        
+_____/_\_______________|_______|____________
+Meds found here: podorozhnyk  -  hp: 15
+(type 'take' to put in the backpack)
+> go
+
+
+Your HP: 40
+Gun damage: 30
+Your backpack: Empty
+
+                 Zaporizhzhia
+      O_,~-                     -~,_O
+     /|                             |
+_____/_\___________________________/_\______
+Your opponent: kstsap -  hp:28
+(type 'fight' to attack)
+> back
+
+
+Your HP: 40
+Gun damage: 30
+Your backpack: Empty
+
+                 Symu
+      O                 _______  
+     /|\               |  aid  |        
+_____/_\_______________|_______|____________
+Meds found here: podorozhnyk  -  hp: 15
+(type 'take' to put in the backpack)
+> take
+You put the podorozhnyk in your backpack
+
+
+Your HP: 40
+Gun damage: 30
+Your backpack: ['podorozhnyk']
+
+                 Symu
+      O 
+     /|\ 
+_____/_\____________________________________
+> go
+
+
+Your HP: 40
+Gun damage: 30
+Your backpack: ['podorozhnyk']
+
+                 Zaporizhzhia
+      O_,~-                     -~,_O
+     /|                             |
+_____/_\___________________________/_\______
+Your opponent: kstsap -  hp:28
+(type 'fight' to attack)
+> go
+WIN ENEMY TO GO AHEAD
+
+
+Your HP: 40
+Gun damage: 30
+Your backpack: ['podorozhnyk']
+
+                 Zaporizhzhia
+      O_,~-                     -~,_O
+     /|                             |
+_____/_\___________________________/_\______
+Your opponent: kstsap -  hp:28
+(type 'fight' to attack)
+> fight
+He's DEAD
+Enemy gun dropped: 
+Gun: Mosin rifle - damage: 10
+
+WOULD YOU LIKE TO TAKE ENEMYS GUN?(y/n)> n
+
+
+Your HP: 30
+Gun damage: 30
+Your backpack: ['podorozhnyk']
+
+                 Zaporizhzhia
+      O 
+     /|\ 
+_____/_\____________________________________
+> go
+
+
+Your HP: 30
+Gun damage: 30
+Your backpack: ['podorozhnyk']
+
+                 Mykolaiv
+      O                 _______  
+     /|\               |  aid  |        
+_____/_\_______________|_______|____________
+Meds found here: salo  -  hp: 20
+(type 'take' to put in the backpack)
+> take
+You put the salo in your backpack
+
+
+Your HP: 30
+Gun damage: 30
+Your backpack: ['podorozhnyk', 'salo']
+
+                 Mykolaiv
+      O 
+     /|\ 
+_____/_\____________________________________
+> go
+
+
+Your HP: 30
+Gun damage: 30
+Your backpack: ['podorozhnyk', 'salo']
+
+                 Mariupol
+                              __/___
+      O_,~-             _____/______| 
+     /|         _______/_____\_______\_____ 
+_____/_\_______ \              < < <       |
+Your SUPER OPPONENT: ruskiy korabl  -  hp:100
+(type 'fight' to attack)
+> fight
+HP now: 20 - your, 70 - enemys
+
+
+Your HP: 20
+Gun damage: 30
+Your backpack: ['podorozhnyk', 'salo']
+
+                 Mariupol
+                              __/___
+      O_,~-             _____/______| 
+     /|         _______/_____\_______\_____ 
+_____/_\_______ \              < < <       |
+Your SUPER OPPONENT: ruskiy korabl  -  hp:70
+(type 'fight' to attack)
+> salo
+enter valid command
+YOUR HP NOW: 40
+
+
+Your HP: 40
+Gun damage: 30
+Your backpack: ['podorozhnyk']
+
+                 Mariupol
+                              __/___
+      O_,~-             _____/______| 
+     /|         _______/_____\_______\_____ 
+_____/_\_______ \              < < <       |
+Your SUPER OPPONENT: ruskiy korabl  -  hp:70
+(type 'fight' to attack)
+> fight
+HP now: 30 - your, 40 - enemys
+
+
+Your HP: 30
+Gun damage: 30
+Your backpack: ['podorozhnyk']
+
+                 Mariupol
+                              __/___
+      O_,~-             _____/______| 
+     /|         _______/_____\_______\_____ 
+_____/_\_______ \              < < <       |
+Your SUPER OPPONENT: ruskiy korabl  -  hp:40
+(type 'fight' to attack)
+> fight
+HP now: 20 - your, 10 - enemys
+
+
+Your HP: 20
+Gun damage: 30
+Your backpack: ['podorozhnyk']
+
+                 Mariupol
+                              __/___
+      O_,~-             _____/______| 
+     /|         _______/_____\_______\_____ 
+_____/_\_______ \              < < <       |
+Your SUPER OPPONENT: ruskiy korabl  -  hp:10
+(type 'fight' to attack)
+> podorozhnyk
+YOUR HP NOW: 35
+
+
+Your HP: 35
+Gun damage: 30
+Your backpack: Empty
+
+                 Mariupol
+                              __/___
+      O_,~-             _____/______| 
+     /|         _______/_____\_______\_____ 
+_____/_\_______ \              < < <       |
+Your SUPER OPPONENT: ruskiy korabl  -  hp:10
+(type 'fight' to attack)
+> fight
+He's DEAD
+
+But to win the russian regime answer those questions.
+Your final exam:
+'Ruskiy korabl idi ... '?:
+1) nahuy
+2) domoy
+3) palanitsa
+ > 1
+
+Batko nash ...: ?
+1) Petlura
+2) Biden
+3) Bandera
+> 3
+
+Dobruy ... Mu z Ukrainu ?
+1) ranok
+2) palanitsa
+3) vechir
+> 3
+You won! Congrads!
+
+UKRAINA PONAD USE

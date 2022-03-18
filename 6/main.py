@@ -55,7 +55,7 @@ print("\nSLAVA UKRAINI and Welcome to the game GAME\n\
  | | \ \| |__| |____) | . \ _| |_   | |    | . \ |__| | | \ \  / ____ \| |_) | |____ \n\
  |_|  \_\\\____/|_____/|_|\_\_____|  |_|    |_|\_\____/|_|  \_\/_/    \_\____/|______|\n\
 \nSmash those russian occupants and God bless you!\n")
-print("-"*38+"\ntype 'help' any time to see game rules\n"+"-"*38)
+print("-"*38+"\ntype 'help' any time you want to check game rules\n"+"-"*38)
 print("\n\n\n\
        .---.\n\
       /_____\\\n\
@@ -79,7 +79,7 @@ print("\n\n\n\
       ^^^ ^^^")
 me.get_description()
 (me.get_gun()).get_description('Your')
-start = input("\n\nWould you like to start?(y/n) \n> ")
+start = input("\n\nReady to start?(y/n) \n> ")
 if start != 'y':
     dead = True
 
@@ -112,13 +112,13 @@ while dead == False:
 
     if command == "go":
         if inhabitant:
-                print("WIN ENEMY TO GO AHEAD")
+                print("BEAT THE ENEMY TO GO AHEAD")
         else:
             current_city_posible = current_city.get_link()[1]
             if current_city_posible is not None:
                 current_city = current_city_posible
             else:
-                print("YOU ARE ON THE FINAL STREET")
+                print("YOU ARE IN THE FINAL CITY")
 
     elif command == "back":
         current_city_posible = current_city.get_link()[0]
@@ -135,7 +135,7 @@ while dead == False:
             if a == 'dead':
                 if inhabitant.get_type() == 'simple':
                     print("Enemy gun dropped: \nGun: {} - damage: {}".format((inhabitant.get_gun()).get_name(), (inhabitant.get_gun()).get_dm()))
-                    chs = input("\nWOULD YOU LIKE TO TAKE ENEMYS GUN?(y/n)> ")
+                    chs = input("\nDO YOU WANT TO TAKE THE ENEMY'S GUN?(y/n)> ")
                     if chs == "y":
                         me.set_gun(inhabitant.get_gun())
                         print('\n')
@@ -160,12 +160,12 @@ while dead == False:
 
     elif command == 'help':
         print("\n<<<helper>>>\n\
-  Your aim: Kill all enemies and to stay alive\n\
+  Your aim: Kill all enemies and stay alive\n\
   Collect meds on your way and use them whenever you need\n\
   COMMANDS:\n\
   > go  - to move ahead\n\
-  > back  - to move back\n\
-  > fight  - to shoot your enemy(check your, enemy HP and gun damage level befor shooting)\n\
+  > back  - to go back\n\
+  > fight  - to shoot the enemy(check your, enemy HP and gun damage level befor shooting)\n\
   > take  - to put the meds you found to the backpack\n\
   to USE the meds from the backpack simply type its name\n")
 

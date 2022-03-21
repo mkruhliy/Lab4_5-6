@@ -10,7 +10,7 @@ Defend Ukrainian cities from russian aggressors. Recover with the meds and healt
 > start the game by running [main.py](6/main.py) in the command line
 
 Screenshots
-
+![alt text](https://github.com/mkruhliy/Lab4_5-6/blob/main/screenshot.png?raw=true)<br />
 
 > check [logfile](6/log.txt) to see more
 

@@ -1,6 +1,6 @@
 class City:
     """place for main action"""
-    def __init__(self, name) -> None:
+    def __init__(self, name=None) -> None:
         self.name = name
         self.character = None
         self.item = None
@@ -35,7 +35,7 @@ _____/_\____________________________________')
 
 class Character:
     """characters and their general behaviour"""
-    def __init__(self, name, hp) -> None:
+    def __init__(self, name=None, hp=None) -> None:
         self.name = name
         self.hp = hp
         self.item = None
@@ -52,7 +52,7 @@ class Character:
 
 class MainCharacter(Character):
     """main character behaviour"""
-    def __init__(self, name, hp, description) -> None:
+    def __init__(self, name=None, hp=None, description=None) -> None:
         super().__init__(name, hp)
         self.description = description
         self.item = None
@@ -93,10 +93,10 @@ class MainCharacter(Character):
 
 class Enemy(Character):
     """enemy behaviour"""
-    def __init__(self, name, hp, typee) -> None:
+    def __init__(self, name=None, hp=None, tp=None) -> None:
         super().__init__(name, hp)
         self.item = None
-        self.type = typee
+        self.type = tp
     def get_description(self):
         """getting description of the enemy"""
         print("      O_,~-                     -~,_O\n\
@@ -109,8 +109,8 @@ _____/_\___________________________/_\______\nYour opponent: {} -  hp:{}\n(type 
 
 class SuperEnemy(Enemy):
     """'super' enemy behaviour"""
-    def  __init__(self, name, hp, typee) -> None:
-        super().__init__(name, hp, typee)
+    def  __init__(self, name=None, hp=None, tp=None) -> None:
+        super().__init__(name, hp, tp)
         self.item = None
     def get_description(self):
         """getting description of the 'super' enemy"""
@@ -136,7 +136,7 @@ Your final exam:\n'Ruskiy korabl idi ... '?:\n1) nahuy\n2) domoy\n3) palanitsa\n
 
 class Item:
     """item general behaviour"""
-    def __init__(self, name, dm) -> None:
+    def __init__(self, name=None, dm=None) -> None:
         self.name = name
         self.dm = dm
     def get_name(self):
@@ -149,7 +149,7 @@ class Item:
 
 class Gun(Item):
     """gun behaviour"""
-    def __init__(self, name, dm) -> None:
+    def __init__(self, name=None, dm=None) -> None:
         super().__init__(name, dm)
     def get_description(self, obj):
         """getting description of the gun"""
@@ -158,7 +158,7 @@ class Gun(Item):
 
 class Support(Item):
     """medicaments behaviour"""
-    def __init__(self, name, dm) -> None:
+    def __init__(self, name=None, dm=None) -> None:
         super().__init__(name, dm)
     def get_description(self):
         """meds description"""
